@@ -51,7 +51,7 @@ angle_dict = {
 }
 
 
-class PolarEquation(Scene):
+class PolarGraph(Scene):
     def setup_theta(self):
         self.theta_tracker = ValueTracker(0)
 
