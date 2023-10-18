@@ -27,9 +27,9 @@ def function(theta):
     )
 
 
-# Remember to update the axes if the function's range is relevant
-function_x_range = [-1.25, 1.25, 1]
-function_y_range = [-1.25, 1.25, 1]
+# Remember to update the axes range if the function's range is relevant (e.g. if r can be > 1.25)
+function_x_range = [-1.25, 1.25]
+function_y_range = [-1.25, 1.25]
 
 
 # Nothing to regularly configure below this line
@@ -72,8 +72,8 @@ class PolarEquation(Scene):
     def setup_axes(self):
         self.axes = (
             Axes(
-                x_range=function_x_range,
-                y_range=function_y_range,
+                x_range=[*function_x_range, 1],
+                y_range=[*function_y_range, 1],
                 axis_config={"include_ticks": False},
                 tips=False,
                 x_length=6,
